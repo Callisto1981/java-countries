@@ -8,12 +8,12 @@ import javax.persistence.*;
 public class Country
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO);
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private long cid;
+    private long countryid;
     private String cname;
-    private long population;
-    private long landmasskm2;
+    private int population;
+    private int landmasskm2;
     private int medianage;
 
 
@@ -21,8 +21,8 @@ public class Country
 
     public Country(
         String cname,
-        long population,
-        long landmasskm2,
+        int population,
+        int landmasskm2,
         int medianage)
     {
         this.cname = cname;
@@ -35,9 +35,9 @@ public class Country
     {
     }
 
-    public long getCid()
+    public long getCountryid()
     {
-        return cid;
+        return countryid;
     }
 
 
@@ -51,22 +51,22 @@ public class Country
         this.cname = cname;
     }
 
-    public long getPopulation()
+    public int getPopulation()
     {
         return population;
     }
 
-    public void setPopulation(long population)
+    public void setPopulation(int population)
     {
         this.population = population;
     }
 
-    public long getLandmasskm2()
+    public int getLandmasskm2()
     {
         return landmasskm2;
     }
 
-    public void setLandmasskm2(long landmasskm2)
+    public void setLandmasskm2(int landmasskm2)
     {
         this.landmasskm2 = landmasskm2;
     }
